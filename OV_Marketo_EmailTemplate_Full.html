@@ -215,15 +215,15 @@
 <!------------------------------------------------------------------------------------>
     <!--graphic-->
     <meta class="mktoString" id="graphicRow_graphicAltText" mktoname="Graphic Alt Text" default="Learn More" mktomodulescope="true">
+    <meta class="mktoNumber" id="graphicRow_imageWidth" mktoname="Image Width" default="60" min="0" max="640" step="1" mktomodulescope="true">
+    <meta class="mktoNumber" id="graphicRow_imageHeight" mktoname="Image Height" default="60" min="0" max="640" step="1" mktomodulescope="true">
+    <meta class="mktoList" id="graphicRow_align" mktoname="Image Alignment" values="left,center,right" default="center" mktomodulescope="true">
     <!--bg-->
     <meta class="mktoColor" id="graphicRow_bg" mktoname="Module BG Color" default="#Ffffff" mktomodulescope="true">
     <!--paddings-->
     <meta class="mktoNumber" id="graphicRow_topPadding" mktoname="Module Top Padding" default="0" min="0" max="300" step="1" mktomodulescope="true">
     <meta class="mktoNumber" id="graphicRow_bottomPadding" mktoname="Module Bottom Padding" default="0" min="0" max="300" step="1" mktomodulescope="true">
     <meta class="mktoNumber" id="graphicRow_sidePaddings" mktoname="Module Side Paddings" default="0" min="0" max="300" step="1" mktomodulescope="true">
-    <!--graphic-->
-    <meta class="mktoNumber" id="graphicRow_imageWidth" mktoname="Image Width" default="60" min="0" max="640" step="1" mktomodulescope="true">
-    <meta class="mktoList" id="graphicRow_align" mktoname="Image Alignment" values="left,center,right" default="center" mktomodulescope="true">
 <!---->
 <!------------------------------------------------------------------------------------>
     <!-- 11. TEXT CONTENT V2 (WHITE-PRODUCT CARDS) - VARIABLES -->
@@ -575,50 +575,18 @@
               <!------------------------------------------------------------------------------------>
               <!-- FULL WIDTH IMAGE MODULE -->
               <!------------------------------------------------------------------------------------>
-              <table id="fullWidthImage" mktoname="Full Width Image" class="mktoModule" width="100%" border="0" cellpadding="0" cellspacing="0"
-                role="presentation" bgcolor="${fullWidthImage_bg}" style="background-color:${fullWidthImage_bg};mso-table-lspace:0pt;mso-table-rspace:0pt;">
-                <tr>
-                  <td align="center" width="640" style="padding:0;font-size:0;line-height:0;">
-
-                    <!--[if mso]>
-                    <table role="presentation" width="640" align="center" cellpadding="0" cellspacing="0" border="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;">
-                      <tr>
-                        <td width="640" align="center" style="padding:0;font-size:0;line-height:0;">
-                          <a href="${fullWidthImage_URL}" target="_blank" rel="noopener" style="display:block;font-size:0;line-height:0;">
-                            <img id="fullWidthImg"
-                              src="${fullWidthImage_src}"
-                              width="640" height="${fullWidthImage_height}" alt="${fullWidthImage_imageAltText}"
-                              style="display:block;border:0;-ms-interpolation-mode:bicubic;">
-                          </a>
-                        </td>
-                      </tr>
-                    </table>
-                    <![endif]-->
-                    <!--[if !mso]><!-->
-                    <table role="presentation" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"
-                      style="width:100%;max-width:640px;margin:0 auto;">
-                      <tr>
-                        <td align="center" width="640" style="padding:0;font-size:0;line-height:0;">
-                          <a href="${fullWidthImage_URL}" target="_blank" rel="noopener" style="display:block;">
-                            <img class="mktoImg" id="fullWidthImg" mktoname="Full Width Image"
-                              src="${fullWidthImage_src}"
-                              width="640" height="${fullWidthImage_height}" alt="${fullWidthImage_imageAltText}"
-                              style="display:block;border:0;outline:none;text-decoration:none;width:100%;max-width:640px;height:auto;-ms-interpolation-mode:bicubic;">
-                          </a>
-                        </td>
-                      </tr>
-                    </table>
-                    <!--<![endif]-->
-                    <!--[if mso]>
-                        </td>
-                      </tr>
-                    </table>
-                    <![endif]-->
-
-                  </td>
-                </tr>
+              <table id="fullWidthImage" mktoname="Full Width Image" class="mktoModule" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" bgcolor="#FBF6E9" style="background-color:#FBF6E9;"> 
+                <tbody> 
+                  <tr> 
+                    <td align="center" width="640" style="padding:0;font-size:0;line-height:0;"> 
+                      <a href="${fullWidthImage_URL}" target="_blank" rel="noopener"> 
+                        <img class="mktoImg" id="heroCreamImg" src="https://go.email-organicvalley.coop/rs/738-GIP-022/images/bbc%20video_hero.jpg" 
+                        width="640" alt="Organic Valley Hero" style="display:block;width:100%;max-width:100%;height:auto;" mktoname="Hero Cream Image"> 
+                      </a> 
+                    </td> 
+                  </tr> 
+                </tbody> 
               </table>
-              
           <!---->
               <!------------------------------------------------------------------------------------>
               <!-- TEXT CONTENT V1 (CREAM) MODULE -->
@@ -880,6 +848,7 @@
                         mktoname="Graphic Image"
                         src="https://go.email-organicvalley.coop/rs/738-GIP-022/images/Butterflie_01_LightGree.png?version=0"
                         width="${graphicRow_imageWidth}"
+                        height="${graphicRow_imageHeight}"
                         alt="${graphicRow_graphicAltText}"
                         style="display:block;border:0;outline:none;text-decoration:none;
                                 width:${graphicRow_imageWidth}px;max-width:${graphicRow_imageWidth}px;height:auto;
