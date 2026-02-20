@@ -42,6 +42,8 @@
 <!------------------------------------------------------------------------------------>
     <!-- 3. FULL WIDTH IMAGE MODULE - VARIABLES ------------------------------------------->
 <!------------------------------------------------------------------------------------>
+    <meta class="mktoString" id="fullWidthImage_src" mktoname="Image Source" default="https://placehold.co/1280x1280" mktomodulescope="true">
+    <meta class="mktoNumber" id="fullWidthImage_height" mktoname="Image Height" default="640" min="0" max="900" step="1" mktomodulescope="true">
     <meta class="mktoString" id="fullWidthImage_URL" mktoname="Image URL" default="https://www.organicvalley.coop/" mktomodulescope="true">
     <meta class="mktoString" id="fullWidthImage_imageAltText" mktoname="Image Alt Text" default="Hero image" mktomodulescope="true">
     <!--bg-->
@@ -178,7 +180,7 @@
     <!--photo-->
     <meta class="mktoString" id="card_stackContent_photoURL" mktoname="Image URL" default="https://www.organicvalley.coop/" mktomodulescope="true">
     <meta class="mktoString" id="card_stackContent_photoAltText" mktoname="Img Alt Text" default="Body copy here" mktomodulescope="true">
-    <meta class="mktoNumber" id="card_stackContent_photoWidth" mktoname="Image Width" default="400" min="0" max="640" step="1" mktomodulescope="true">
+    <meta class="mktoNumber" id="card_stackContent_photoWidth" mktoname="Image Width" default="400" min="0" max="500" step="1" mktomodulescope="true">
     <!--button-->
     <meta class="mktoString" id="card_stackContent_buttonURL" mktoname="Button URL" default="https://www.organicvalley.coop/" mktomodulescope="true">
     <meta class="mktoString" id="card_stackContent_buttonAltText" mktoname="Btn Img Alt Text" default="Body copy here" mktomodulescope="true">
@@ -576,28 +578,37 @@
               <table id="fullWidthImage" mktoname="Full Width Image" class="mktoModule" width="100%" border="0" cellpadding="0" cellspacing="0"
                 role="presentation" bgcolor="${fullWidthImage_bg}" style="background-color:${fullWidthImage_bg};mso-table-lspace:0pt;mso-table-rspace:0pt;">
                 <tr>
-                  <td align="center" style="padding:0;font-size:0;line-height:0;">
+                  <td align="center" width="640" style="padding:0;font-size:0;line-height:0;">
 
                     <!--[if mso]>
-                    <table role="presentation" width="640" align="center" cellpadding="0" cellspacing="0" border="0">
+                    <table role="presentation" width="640" align="center" cellpadding="0" cellspacing="0" border="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;">
                       <tr>
-                        <td width="640" style="padding:0;font-size:0;line-height:0;">
-                    <![endif]-->
-
-                    <table role="presentation" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"
-                      style="width:100%;max-width:640px;margin:0 auto;">
-                      <tr>
-                        <td align="center" style="padding:0;font-size:0;line-height:0;">
-                          <a href="${fullWidthImage_URL}" target="_blank" rel="noopener" style="display:block;">
-                            <img class="mktoImg" id="fullWidthImg" mktoname="Full Width Image"
-                              src="https://placehold.co/640x400"
-                              width="640" alt="${fullWidthImage_imageAltText}"
-                              style="display:block;border:0;outline:none;text-decoration:none;width:100%;max-width:640px;-ms-interpolation-mode:bicubic;">
+                        <td width="640" align="center" style="padding:0;font-size:0;line-height:0;">
+                          <a href="${fullWidthImage_URL}" target="_blank" rel="noopener" style="display:block;font-size:0;line-height:0;">
+                            <img id="fullWidthImg"
+                              src="${fullWidthImage_src}"
+                              width="640" height="${fullWidthImage_height}" alt="${fullWidthImage_imageAltText}"
+                              style="display:block;border:0;-ms-interpolation-mode:bicubic;">
                           </a>
                         </td>
                       </tr>
                     </table>
-
+                    <![endif]-->
+                    <!--[if !mso]><!-->
+                    <table role="presentation" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"
+                      style="width:100%;max-width:640px;margin:0 auto;">
+                      <tr>
+                        <td align="center" width="640" style="padding:0;font-size:0;line-height:0;">
+                          <a href="${fullWidthImage_URL}" target="_blank" rel="noopener" style="display:block;">
+                            <img class="mktoImg" id="fullWidthImg" mktoname="Full Width Image"
+                              src="${fullWidthImage_src}"
+                              width="640" height="${fullWidthImage_height}" alt="${fullWidthImage_imageAltText}"
+                              style="display:block;border:0;outline:none;text-decoration:none;width:100%;max-width:640px;height:auto;-ms-interpolation-mode:bicubic;">
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                    <!--<![endif]-->
                     <!--[if mso]>
                         </td>
                       </tr>
@@ -607,6 +618,7 @@
                   </td>
                 </tr>
               </table>
+              
           <!---->
               <!------------------------------------------------------------------------------------>
               <!-- TEXT CONTENT V1 (CREAM) MODULE -->
@@ -698,11 +710,10 @@
                     <!---->
                     <!-- Row #1 -->
                     <tr>
-                      <td width="100%" valign="top" style="padding:0;margin:0;vertical-align:top;line-height:0;
-                      font-size:0;">
+                      <td width="100%" valign="top" style="padding:0;margin:0;vertical-align:top;line-height:0;font-size:0;overflow: hidden;">
                         <a href="${recipe_stack_imageURL}">
                           <img class="mktoImg" id="recipeImageImg" mktoname="Recipe Image"
-                            src="https://go.email-organicvalley.coop/rs/738-GIP-022/images/POS_1280x700.jpg"
+                            src="https://placehold.co/1280x720"
                             width="600" height="350" alt="${recipe_stack_imageAltText}"
                             style="display:block;width:100%;max-width:600px;height:350px;object-fit:cover;border-radius:${recipe_stack_cornerRadius}px ${recipe_stack_cornerRadius}px 0 0;
                             border:0;margin:0;padding:0;-ms-interpolation-mode:bicubic;">
@@ -752,7 +763,8 @@
               <!------------------------------------------------------------------------------------>
               <!-- CARD (STACK CONTENT) MODULE -->
               <!------------------------------------------------------------------------------------>
-              <table bgcolor="${card_stackContent_moduleBg}" border="0" cellpadding="0" cellspacing="0" class="mktoModule" id="card_stackContent" mktoName="Card (Stack Content)" role="presentation" style="background-color:${card_stackContent_moduleBg};mso-table-lspace:0pt;mso-table-rspace:0pt;" width="100%">
+              <table bgcolor="${card_stackContent_moduleBg}" border="0" cellpadding="0" cellspacing="0" class="mktoModule" id="card_stackContent" mktoName="Card (Stack Content)" role="presentation" 
+                style="background-color:${card_stackContent_moduleBg};mso-table-lspace:0pt;mso-table-rspace:0pt;" width="100%">
                 <tr>
                   <td align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;" valign="top">
                     <!--[if mso]>
@@ -777,7 +789,10 @@
                                   <tr>
                                     <td align="center" style="font-size:0;line-height:0;">
                                       <a href="${card_stackContent_photoURL}" rel="noopener" style="display:inline-block;line-height:0;" target="_blank">
-                                        <img alt="${card_stackContent_photoAltText}" class="mktoImg" id="card_stackContent_photo" mktoName="Photo" src="https://go.email-organicvalley.coop/rs/738-GIP-022/images/milk%20in%20cooler%201280.jpg" style="display:block;border:0;outline:none;width:${card_stackContent_photoWidth}px;max-width:100%;height:auto;-ms-interpolation-mode:bicubic;" width="${card_stackContent_photoWidth}"/>
+                                        <img alt="${card_stackContent_photoAltText}" class="mktoImg" id="card_stackContent_photo" mktoName="Photo" 
+                                        src="https://placehold.co/1000x700" 
+                                        style="display:block;border:0;outline:none;width:${card_stackContent_photoWidth}px;max-width:100%;height:auto;-ms-interpolation-mode:bicubic;" 
+                                        width="${card_stackContent_photoWidth}"/>
                                       </a>
                                     </td>
                                   </tr>
@@ -859,7 +874,8 @@
                 <tr class="spacer-cell"><td height="${graphicRow_topPadding}px" style="height:${graphicRow_topPadding}px;line-height:${graphicRow_topPadding}px;font-size:${graphicRow_topPadding}px;">&nbsp;</td></tr>
                 <tr>
                   <td align=${graphicRow_align} style="padding:0 ${graphicRow_sidePaddings}px; alignment:${graphicRow_align};font-size:0;line-height:0;mso-line-height-rule:exactly;">
-                    <img class="mktoImg"
+                    <div style="max-width:${graphicRow_imageWidth}px;overflow:hidden;margin:0 auto;">                    
+                      <img class="mktoImg"
                         id="graphicRow_img"
                         mktoname="Graphic Image"
                         src="https://go.email-organicvalley.coop/rs/738-GIP-022/images/Butterflie_01_LightGree.png?version=0"
@@ -869,6 +885,7 @@
                                 width:${graphicRow_imageWidth}px;max-width:${graphicRow_imageWidth}px;height:auto;
                                 -ms-interpolation-mode:bicubic;"
                         border="0">
+                    </div>
                 </td></tr>
                 <tr class="spacer-cell"><td height="${graphicRow_bottomPadding}px" style="height:${graphicRow_bottomPadding}px;line-height:${graphicRow_bottomPadding}px;font-size:${graphicRow_bottomPadding}px;">&nbsp;</td></tr>
               </table>
@@ -921,8 +938,9 @@
                                             <div class="card-img-wrap" align="center" style="max-width:250px;margin:0 auto;">
                                               <!--image link-->
                                               <a href="${product_sidebyside_left_photo_URL}" target="_blank" rel="noopener">
+                                                <!--image-->
                                                 <img class="mktoImg" id="productLeftImage_photo" mktoname="Photo"
-                                                src="https://go.email-organicvalley.coop/rs/738-GIP-022/images/bbc%20video_hero.jpg"
+                                                src="https://placehold.co/500x500"
                                                 width="250" alt="${product_sidebyside_left_photoAltText}" style="display:block;height:auto;border:0;width:100%;-ms-interpolation-mode:bicubic;">
                                               </a>
                                             </div>
@@ -957,8 +975,9 @@
                                       <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
                                         <tr>
                                           <td class="pad" style="text-align:center;font-size:0;line-height:0;">
-                                            <!--button-->
+                                            <!--button link-->
                                             <a href="${product_sidebyside_left_buttonURL}" target="_blank" rel="noopener" style="display:inline-block;line-height:0;">
+                                              <!--button image-->
                                               <img class="mktoImg" id="productCardLefttButtonImg" mktoname="Product Card - Image Right Button Image"
                                                 src="https://go.email-organicvalley.coop/rs/738-GIP-022/images/btn_learnMore_white_barnRed.png?version=0"
                                                 width="${product_sidebyside_right_buttonWidth}" alt="${product_sidebyside_left_buttonAltText}"
@@ -990,29 +1009,38 @@
                     <tr><td style="padding:${product_sidebyside_right_topPadding}px ${product_sidebyside_right_sidePaddings}px ${product_sidebyside_right_bottomPadding}px;">
                       <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:${product_sidebyside_right_cardBg};">
                         <tr><td>
+                          <!--card-->
                           <div style="padding:15px;border:${product_sidebyside_right_borderWidth}px solid ${product_sidebyside_right_borderColor};border-radius:${product_sidebyside_right_borderRadius}px;">
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
                               <tr class="stack reverse">
                                 <td class="column column-1 first" width="50%" valign="${product_sidebyside_right_contentAlign}" style="padding:0 10px 0 5px;vertical-align:${product_sidebyside_right_contentAlign};">
-                                  <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
-                                    <td class="pad" style="padding-bottom:10px;text-align:center;">
-                                      <div class="mktoText" id="productCardRightHeadlineText" mktoname="Product Card - Image Right Headline"
-                                        style="color:${product_sidebyside_right_headlineColor};font-family:${font_family_condensed};font-size:${product_sidebyside_right_headlineSize}px;font-weight:${product_sidebyside_right_headlineWeight};line-height:1.2;text-align:center;">
-                                        <p style="margin:0;">${product_sidebyside_right_headlineContent}</p>
-                                      </div>
-                                    </td>
-                                  </tr></table>
+                                  <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                    <tr>
+                                      <!--text content column-->
+                                      <td class="pad" style="padding-bottom:10px;text-align:center;">
+                                        <!--text content-->
+                                        <div class="mktoText" id="productCardRightHeadlineText" mktoname="Product Card - Image Right Headline"
+                                            style="color:${product_sidebyside_right_headlineColor};font-family:${font_family_condensed};font-size:${product_sidebyside_right_headlineSize}px;font-weight:${product_sidebyside_right_headlineWeight};line-height:1.2;text-align:center;">
+                                          <!--header-->
+                                          <p style="margin:0;">${product_sidebyside_right_headlineContent}</p>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
                                   <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
                                     <td class="pad" style="padding-bottom:20px;padding-left:20px;padding-right:20px;text-align:center;">
                                       <div class="mktoText" id="productCardRightBodyText" mktoname="Product Card - Image Right Body"
                                         style="color:${product_sidebyside_right_pColor};font-family:${font_family_regular};font-size:${product_sidebyside_right_pSize}px;font-weight:${product_sidebyside_right_pWeight};line-height:1.4;text-align:center;">
+                                        <!--p-->
                                         <p style="margin:0;">${product_sidebyside_right_bodyContent}</p>
                                       </div>
                                     </td>
                                   </tr></table>
                                   <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
                                     <td class="pad" style="text-align:center;font-size:0;line-height:0;">
+                                      <!--button link-->
                                       <a href="${product_sidebyside_right_buttonURL}" target="_blank" rel="noopener" style="display:inline-block;line-height:0;">
+                                        <!--button image-->
                                         <img class="mktoImg" id="productCardRightButtonImg" mktoname="Product Card - Image Right Button Image"
                                           src="https://go.email-organicvalley.coop/rs/738-GIP-022/images/btn_learnMore_white_barnRed.png?version=0"
                                           width="${product_sidebyside_right_buttonWidth}" alt="${product_sidebyside_right_buttonAltText}"
@@ -1021,13 +1049,16 @@
                                     </td>
                                   </tr></table>
                                 </td>
+                                <!--image column-->
                                 <td class="column column-2 last" width="50%" valign="${rs_sidebyside_right_contentAlign}" style="padding:0;vertical-align:${rs_sidebyside_right_contentAlign};">
                                   <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
                                     <td class="pad img-pad" style="width:100%;padding-bottom:0;">
                                       <div class="card-img-wrap" align="center" style="max-width:250px;margin:0 auto; height:auto; line-height:0; font-size:0;">
+                                        <!--image link-->
                                         <a href="${product_sidebyside_right_photo_URL}" target="_blank" rel="noopener">
+                                          <!--image-->
                                           <img class="mktoImg" id="productkRightImageImg" mktoname="Rootstock Right Image"
-                                          src="https://go.email-organicvalley.coop/rs/738-GIP-022/images/bbc%20video_hero.jpg"
+                                          src="https://placehold.co/500x500"
                                           width="250" alt="${product_sidebyside_right_photoAltText}" style="display:block;height:auto;border:0;width:auto; max-width:100%">
                                         </a>
                                       </div>
@@ -1091,7 +1122,7 @@
                                       <div class="card-img-wrap" align="center" style="max-width:250px;margin:0 auto; height:auto; line-height:0; font-size:0;">
                                         <a href="${rs_sidebyside_left_photo_URL}" target="_blank" rel="noopener">
                                           <img class="mktoImg" id="rootstockLeftImageImg" mktoname="Rootstock Leftt Image"
-                                          src="https://go.email-organicvalley.coop/rs/738-GIP-022/images/bbc%20video_hero.jpg"
+                                          src="https://placehold.co/500x500"
                                           width="250" alt="${rs_sidebyside_left_photoAltText}" style="display:block;height:auto;border:0;width:auto; max-width:100%;-ms-interpolation-mode:bicubic;">
                                         </a>
                                       </div>
@@ -1186,7 +1217,9 @@
                                               <td class="pad img-pad" style="width:100%;padding-bottom:0;">
                                                 <div align="center" class="card-img-wrap" style="max-width:250px;margin:0 auto; height:auto; line-height:0; font-size:0;">
                                                   <a href="${rs_sidebyside_right_photo_URL}" rel="noopener" target="_blank">
-                                                    <img alt="${rs_sidebyside_right_photoAltText}" class="mktoImg" id="rootstockRightImageImg" mktoName="Rootstock Right Image" src="https://go.email-organicvalley.coop/rs/738-GIP-022/images/bbc%20video_hero.jpg" style="display:block;height:auto;border:0;width:auto; max-width:100%;-ms-interpolation-mode:bicubic;" width="250"/>
+                                                    <img alt="${rs_sidebyside_right_photoAltText}" class="mktoImg" id="rootstockRightImageImg" mktoName="Rootstock Right Image" 
+                                                    src="https://placehold.co/500x500" 
+                                                    style="display:block;height:auto;border:0;width:auto; max-width:100%;-ms-interpolation-mode:bicubic;" width="250"/>
                                                   </a>
                                                 </div>
                                               </td>
